@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1">
+<listeners>
+	<listener class-name="configure.Listener" />
+</listeners>
+<test name="Sauce test suite" preserve-order="true">
+	<parameter name="sauce" value="false" />
+		<parameter name="browser" value="firefox" />
+		<parameter name="username" value=""/>
+		<parameter name="key" value="" />
+		<parameter name="os" value="" />
+		<parameter name="browserVersion" value="" />
+		<parameter name="sauceLabsUrl" value="" />
+        </test>
+  <test name="Local test suite" preserve-order="true">
+	<parameter name="loctest" value="true" />
+	<parameter name="browser" value="firefox" />
+       <classes>
+     	<class name="test.Login"/>
+     	<class name="test.GoShopping"/>
+     	<class name="test.MyFFreesAccount"/>
+     	<class name="test.ShowBalance"/>
+       </classes>
+  </test>
+</suite>
